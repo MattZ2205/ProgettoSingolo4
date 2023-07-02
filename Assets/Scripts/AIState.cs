@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class AIState : MonoBehaviour
 {
-
-
-    void Start()
+    public enum State
     {
-        
-    }
-
-    void Update()
-    {
-        
+        Cooking,
+        Walking,
+        Filling,
+        Sleeping
     }
 }
