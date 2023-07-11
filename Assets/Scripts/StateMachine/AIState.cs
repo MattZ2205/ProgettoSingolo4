@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
@@ -26,9 +27,27 @@ public class AIState : MonoBehaviour
     public State action;
     protected Event state;
 
+    protected GameObject shef;
+    protected Routines routines;
+    protected Inventory inventory;
     protected NavMeshAgent agent;
+    protected Transform cookingPoint;
+    protected Transform sleepingPoint;
+    protected Transform[] storagePoints;
     protected AIState nextState;
-    protected Transform[] points;
+
+    public AIState(GameObject _shef, NavMeshAgent _agent, Inventory _inventory, Transform _cookinPoint, Transform _sleepingPoints, Transform[] _storagePoints, Routines _routines)
+    {
+        state = Event.Enter;
+
+        shef = _shef;
+        agent = _agent;
+        inventory = _inventory;
+        cookingPoint = _cookinPoint;
+        sleepingPoint = _sleepingPoints;
+        storagePoints = _storagePoints;
+        routines = _routines;
+    }
 
     public virtual void Enter() => state = Event.Updating;
 
