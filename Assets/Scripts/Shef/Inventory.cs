@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.Port;
-using static UnityEditor.Progress;
 
 [Serializable]
 public struct Item

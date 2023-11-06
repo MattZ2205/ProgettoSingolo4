@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Scripting.APIUpdating;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Cooking : AIState
 {
